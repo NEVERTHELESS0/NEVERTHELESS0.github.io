@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <title>庐山市锦磊石材有限公司</title>
+    <meta content="天然板岩,砂岩,蘑菇石,文化石,火烧板,花岗岩,乱型石,异型石材" name="keywords"/>
+    <meta content="石材加工、销售为一体，江西星子文化石资源丰富，品种繁多，是全国知名天然文化石生产基地之一。主营产品：天然板岩、砂岩、蘑菇石、文化石、火烧板、花岗岩，乱型石，异型石材，等各种规格石材制品的大型企业。"
+          name="description"/>
+    <meta content="telephone=no" name="format-detection">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+
+    <link href="css/aos.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/idangerous.swiper.css" rel="stylesheet"/>
+    <link href="css/lightbox.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
+    <link href="css/apmin.css" rel="stylesheet"/>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/me.css">
+
+    <script src="js/jquery.min.js" ></script>
+    <script src="js/vue-2.6.10.js"></script>
+    <script src="js/templete.js"></script>
+</head>
+<body>
+
+<!--轮播栏-->
+<div class="am-add" id="banner_mobile">
+    <banner_mobile></banner_mobile>
+</div>
+
+<!--浮动栏-->
+<section id="nav_mobile" >
+    <nav_mobile></nav_mobile>
+</section>
+
+<div class="ng-container ng-fault" id="ng-container">
+    <!--产品名称-->
+    <ng-isubnav v-bind:titles="titles" v-bind:num="num"></ng-isubnav>
+    <!--产品栏 大图-->
+    <ng-inmod v-bind:items="items" v-bind:type="type"></ng-inmod>
+</div>
+
+<!--载入页脚-->
+<div class="am-end" id="am-end">
+    <!--    底部菜单-->
+    <ng-fault></ng-fault>
+
+    <!--    底部信息-->
+    <ng-siobox></ng-siobox>
+</div>
+
+<script>
+    var number = 13;
+    var type = 0;
+
+    new Vue({
+        el: '#ng-container',
+        data: {
+            num: number,
+            items: productImg[number],
+            titles: products[type],
+            type: type,
+        }
+    });
+    new Vue({
+        el: '#nav_mobile',
+    });
+    new Vue({
+        el: '#banner_mobile',
+    });
+    new Vue({
+        el: '#am-end'
+    })
+
+    $(function () {
+        if ($(".flexslider").length != 0) {
+            $('.flexslider').flexslider({
+                animation: "fade",
+                //smoothHeight: true,
+                slideshowSpeed: 3000, // Integer: ms 滚动间隔时间
+                animationSpeed: 600, // Integer: ms 动画滚动速度
+                start: function (slider) {
+                    //$('body').removeClass('loading');
+                }
+            });
+        }
+    });
+
+</script>
+
+<script src="js/jquery.min.js" ></script>
+<script src="js/idangerous.swiper.min.js" ></script>
+<script charset="utf-8" src="js/aos.js" type="text/javascript"></script>
+<script charset="utf-8"  src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.superslide.2.1.1.js"></script>
+<script src="js/app.js" ></script>
+<script src="js/jquery.flexslider-min.js" ></script>
+</body>
+</html>
+
